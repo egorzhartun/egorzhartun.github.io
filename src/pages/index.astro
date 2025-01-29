@@ -13,15 +13,15 @@ import AboutMe from "../components/AboutMe.astro";
 		<div id="card-profile" class="row-span-2 col-span-12 md:col-span-3 border border-dashed">
 			<CardProfile/>
 		</div>
-		<div class="col-span-12 md:col-span-9 border border-dashed">
+		<div id="about-me" class="col-span-12 md:col-span-9 border border-dashed">
 			<AboutMe />
 		</div>
 		
 		
-		<div class="md:col-span-3 col-span-12 border border-dashed">
+		<div id="null" class="md:col-span-3 col-span-12 border border-dashed">
 			<span class="p-3">null</span>
 		</div>
-		<div class="md:col-span-6 col-span-12 border border-dashed">
+		<div id="null-1" class="md:col-span-6 col-span-12 border border-dashed">
 			<span class="p-3">null</span>
 		</div>
 		
@@ -35,7 +35,13 @@ import AboutMe from "../components/AboutMe.astro";
 		console.log('loading..')
 		
 		let el = document.getElementById("card-profile");
+		let el2 = document.getElementById("about-me");
+		let el3 = document.getElementById("null");
+		let el4 = document.getElementById("null-1");
 
 		el?.classList.add("animate-fadeIn");
+		el2?.classList.add("animate-fadeIn");
+		el3?.classList.add("animate-fadeIn");
+		el4?.classList.add("animate-fadeIn");
 	});
 </script>
