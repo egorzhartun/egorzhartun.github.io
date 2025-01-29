@@ -1,11 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro';
+//import Welcome from '../components/Welcome.astro';
+import Header from "../components/Header.astro";
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import CardProfile from "../components/CardProfile.astro";
+import AboutMe from "../components/AboutMe.astro";
+//import CopyCodeBlock from "../components/CopyCodeBlock.astro";
 ---
-
 <Layout>
-	<Welcome />
+	<Header />
+	
+	<div class="grid grid-cols-12 gap-5 pb-10 mb-10">
+		<div id="card-profile" class="row-span-2 col-span-12 md:col-span-3 border border-dashed">
+			<CardProfile/>
+		</div>
+		<div class="col-span-12 md:col-span-9 border border-dashed">
+			<AboutMe />
+		</div>
+		
+		
+		<div class="md:col-span-3 col-span-12 border border-dashed">
+			<span class="p-3">null</span>
+		</div>
+		<div class="md:col-span-6 col-span-12 border border-dashed">
+			<span class="p-3">null</span>
+		</div>
+		
+	  </div>
+
+	 
 </Layout>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+		console.log('loading..')
+		
+		let el = document.getElementById("card-profile");
+
+		el?.classList.add("animate-fadeIn");
+	});
+</script>
