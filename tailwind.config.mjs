@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: 'class',
   theme: {
     extend: {
       animation: {
@@ -51,10 +52,9 @@ export default {
         },
       },
       colors: {
-        //light: "#F4F5F0",
+        transparent: "transparent",
         light: "#888A7E",
         dark: "#111111",
-        //light: "#f3f3f3",
         blue: "#33d2ff",
         gray: "#C4C4C4",
         "dark-gray": "#1A1A1A",
